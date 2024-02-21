@@ -1,0 +1,56 @@
+/*paleta de cores*/
+.paletas {
+   color: #f8f4c4;
+   color: #d5e0b5;
+   color: #a5c3a7;
+   color: #6d8b89;
+   color: #47667b;
+}
+
+body {
+   margin: 0%;
+   padding: 0%;
+   border: 0%;
+   background-color: #f8f4c4;
+}
+
+nav {
+   position: sticky;
+   display: block;
+   width: 100%;
+   height: 3rem;
+   background: #47667b;
+}
+.aindex{
+   text-decoration: none;
+   color: #3b5e75;
+   font-weight: 800;
+   background-color: #d5e0b5;
+   margin: 5px;
+   padding: 2px;
+}
+
+.re {
+   height: 3rem;
+   margin-left: 5px;
+   position: fixed;
+}
+
+.centralizado {
+   height: 100%;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   color: #47667b;
+   font-weight: 700;
+   text-align: center;
+}
+
+.menus {
+   align-items: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-decoration:none;
+   font-size: 2rem;
+}
