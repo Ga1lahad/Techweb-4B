@@ -7,6 +7,8 @@
    color: #47667b;
 }
 
+
+
 body {
    margin: 0%;
    padding: 0%;
@@ -15,13 +17,40 @@ body {
 }
 
 nav {
-   position: sticky;
+   position: fixed;
    display: block;
    width: 100%;
    height: 3rem;
    background: #47667b;
+   border: 2px;
 }
-.aindex{
+
+.labelCadastro {
+   font-size: 2rem;
+   text-align: left;
+}
+
+.inputCadastro {
+   background-color: #fffcde;
+   color: #3b5e75;
+   border-radius: 10px;
+   padding: 7px;
+   font-size: medium;
+   border-color: #a5c3a7;
+}
+
+.inputEnviar {
+   background-color: #fffcde;
+   color: #3b5e75;
+   border-radius: 10px;
+   padding: 3px;
+   font-size: x-large;
+   font-weight: 700;
+   border-color: #a5c3a7;
+   border-style: inset;
+}
+
+.aindex {
    text-decoration: none;
    color: #3b5e75;
    font-weight: 800;
@@ -51,6 +80,16 @@ nav {
    display: flex;
    flex-direction: column;
    justify-content: center;
-   text-decoration:none;
+   text-decoration: none;
    font-size: 2rem;
+}
+
+.formCadastro {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-decoration: none;
+   font-size: 2rem;
+   width: 50%;
+   align-items: stretch;
 }
