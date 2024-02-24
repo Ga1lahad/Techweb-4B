@@ -1,7 +1,7 @@
 <?php
 try {
     /*Faz a conexão com o banco*/
-    $bd = new PDO('mysqli:host=localhost;dbname=techweb', 'root@localhost', '');
+    $bd = new PDO('mysql:host=localhost;dbname=techweb', 'root', '');
     /*Define o PDO do $bd para capturar os erros*/
     $bd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
