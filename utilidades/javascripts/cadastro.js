@@ -8,23 +8,29 @@ const cep = document.getElementById('cep');
 const cpf = document.getElementById('cpf');
 const senha = document.getElementById('senha');
 const repetir = document.getElementById('repetir');
+const fazedor = new Object;
+
 
 //Funções que sao ativadas para cada campo necessario.
 function nomeFill() {
-    console.log(nome.value);
 }
 function emailFill() {
-    console.log(email.value);
 }
 function telefoneFill() {
-    console.log(telefone.value);
 }
 function cepFill() {
-    console.log(cep.value);
 }
 function cpfFill() {
-    console.log(cpf.value);
 }
 function senhaFill() {
-    console.log(senha.value);
 }
+function coletor() {
+    fazedor.nome = nome.value;
+    fazedor.email = email.value;
+    fazedor.telefone = telefone.value;
+    fazedor.cep = cep.value;
+    fazedor.cpf = cpf.value;
+    fazedor.senha = senha.value;
+    console.log("Coleta rodou");
+    console.log(fazedor);
+};

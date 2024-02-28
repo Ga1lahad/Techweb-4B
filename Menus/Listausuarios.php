@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
+    <div style="height: 3rem;">
     <nav>
     <a href="../"><img class="re" src="../utilidades/imgs/re.png" alt="Seta de Retorno"></a>
     </nav>
+    </div>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -9,7 +10,9 @@
 </head>
 
 <body>
+    <div style="height: 3rem;">
     <nav></nav>
+    </div>
     <div class="centralizado">
         <h1>Selecione das opções abaixo<br>qual menu deseja acessar:</h1>
     </div>

@@ -1,6 +1,13 @@
 <?php
-require('../utilidades/conexao.php')
-//if(isset($_POST[])){}
+require('../utilidades/conexao.php');
+if(!empty($_POST)){
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $cep = $_POST['cep'];
+    $cpf = $_POST['cpf'];
+    $senha = $_POST['senha'];
+    };
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -42,7 +49,7 @@ require('../utilidades/conexao.php')
                     <input id="repetir" class="inputCadastro" type="password">
                 </div>
             </div><br>
-            <input id="enviar" class="inputEnviar" type="submit" value="Enviar">
+            <input id="enviar" class="inputEnviar" onclick="coletor()" type=" " value="Enviar">
         </form>
     </div>
 </body>
