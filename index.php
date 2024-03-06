@@ -19,6 +19,7 @@
     <div class="menus">
         <a class="aindex" href="Menus/Cadastro.php">Cadastros</a>
         <a class="aindex" href="Menus/Listausuarios.php">Listar usuarios</a>
+        <a class="aindex" href="Menus/login.php">Login</a>
 
     </div>
 </body>

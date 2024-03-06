@@ -1,13 +1,20 @@
 <?php
 require('../utilidades/conexao.php');
 if(!empty($_POST)){
+    $sql="";
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
     $cep = $_POST['cep'];
     $cpf = $_POST['cpf'];
     $senha = $_POST['senha'];
-    };
+    $repetir = $_POST['repetir'];
+    if($nome != null and $email != null and $telefone != null and $cep != null and $cpf != null and ($senha == $repetir and $senha != null)){
+        $sql="INSERT into usuarios (nome,email,telefone,cep,cpf,senha)
+        VALUES('$nome','$email','$telefone','$cep','$cpf','$senha')";
+        }
+    $bd->query($sql);
+};
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -46,10 +53,10 @@ if(!empty($_POST)){
                 </div>
                 <div class="divCadastro1">
                     <label class=" labelCadastro" for=""> Repita a senha</label>
-                    <input id="repetir" class="inputCadastro" type="password">
+                    <input id="repetir" name="repetir" class="inputCadastro" type="password">
                 </div>
             </div><br>
-            <input id="enviar" class="inputEnviar" onclick="coletor()" type=" " value="Enviar">
+            <input id="enviar" class="inputEnviar" onsubmit="coletor()" type="submit" value="Enviar">
         </form>
     </div>
 </body>

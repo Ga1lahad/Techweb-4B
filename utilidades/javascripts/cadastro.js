@@ -10,6 +10,19 @@ const senha = document.getElementById('senha');
 const repetir = document.getElementById('repetir');
 const fazedor = new Object;
 
+form.addEventListener("submit", (coletor) => {
+    fazedor.nome = nome.value;
+    fazedor.email = email.value;
+    fazedor.telefone = telefone.value;
+    fazedor.cep = cep.value;
+    fazedor.cpf = cpf.value;
+    fazedor.senha = senha.value;
+    console.log("Coleta rodou");
+    console.log(fazedor);
+    coletor.preventDefault;
+});
+
+
 
 //Funções que sao ativadas para cada campo necessario.
 function nomeFill() {
@@ -24,13 +37,3 @@ function cpfFill() {
 }
 function senhaFill() {
 }
-function coletor() {
-    fazedor.nome = nome.value;
-    fazedor.email = email.value;
-    fazedor.telefone = telefone.value;
-    fazedor.cep = cep.value;
-    fazedor.cpf = cpf.value;
-    fazedor.senha = senha.value;
-    console.log("Coleta rodou");
-    console.log(fazedor);
-};
