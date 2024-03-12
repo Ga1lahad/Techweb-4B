@@ -1,7 +1,6 @@
 <?php
 require('../utilidades/conexao.php');
 session_start();
-session_abort();
 if (!empty($_POST)) {
     $sql = "";
     $login = $_POST['login'];
@@ -14,7 +13,9 @@ if (!empty($_POST)) {
         foreach ($rows as $row) {
             $_SESSION["Email"] = $row["email"];
             $_SESSION["nome"] = $row["nome"];
+            header("Location:../", true);
         }
+        /*Nao ta funcionando*/
         if (empty($_SESSION["Email"])) {
             echo ('<script>alert("Entrada invalida");</script>');
         }

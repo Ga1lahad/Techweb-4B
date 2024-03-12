@@ -39,6 +39,7 @@ nav {
    border-color: #a5c3a7;
 }
 
+
 .inputEnviar {
    background-color: #fffcde;
    color: #3b5e75;
@@ -107,4 +108,36 @@ nav {
    font-size: 2rem;
    width: 50%;
    align-items: stretch;
+}
+
+.tabela {
+   border: outset;
+   background-color: #fffcde;
+   font-size: 2rem;
+   width: 100%;
+}
+
+.inputCadastro.Lista {
+   width: 80%;
+   padding: 1px;
+   font-size: 1rem;
+   margin-bottom: 1rem;
+}
+
+.inputEnviar.Lista {
+   padding: 1px;
+   font-size: 1rem;
+   margin-bottom: 1rem;
+   width: 15%;
+}
+
+
+th {
+   border: inset;
+   border-color: #6d8b89;
+   border-width: 3px;
+}
+
+.lid {
+   background-color: #f1efd3;
 }
