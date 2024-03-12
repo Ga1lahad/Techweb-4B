@@ -1,6 +1,7 @@
 <?php
 require('../utilidades/conexao.php');
 session_start();
+session_abort();
 if (!empty($_POST)) {
     $sql = "";
     $login = $_POST['login'];
@@ -13,6 +14,9 @@ if (!empty($_POST)) {
         foreach ($rows as $row) {
             $_SESSION["Email"] = $row["email"];
             $_SESSION["nome"] = $row["nome"];
+        }
+        if (empty($_SESSION["Email"])) {
+            echo ('<script>alert("Entrada invalida");</script>');
         }
     } catch (PDOException $e) {
         echo 'ERROR: ' . $e->getMessage();
