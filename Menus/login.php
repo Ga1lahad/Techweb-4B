@@ -1,15 +1,19 @@
 <?php
 require('../utilidades/conexao.php');
+session_start();
 if (!empty($_POST)) {
     $sql = "";
     $login = $_POST['login'];
     $pass = $_POST['pass'];
     if ($login != null and $pass != null) {
-        $sql = "SELECT email,senha FROM usuarios WHERE 'email' = '$login' AND 'senha' = '$pass'";
+        $sql = "SELECT email,nome FROM usuarios WHERE email = '$login' AND senha ='$pass';";
     }
     try {
-        $result = $bd->query($sql, PDO::FETCH_ASSOC);
-        echo $result['email'];
+        $rows = $bd->query($sql);
+        foreach ($rows as $row) {
+            $_SESSION["Email"] = $row["email"];
+            $_SESSION["nome"] = $row["nome"];
+        }
     } catch (PDOException $e) {
         echo 'ERROR: ' . $e->getMessage();
     };

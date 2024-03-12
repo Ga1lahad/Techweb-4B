@@ -1,3 +1,8 @@
+<?php
+require "../utilidades/autoload.php";
+sessionador();
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 

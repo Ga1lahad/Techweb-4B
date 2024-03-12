@@ -1,7 +1,8 @@
 <?php
-require('../utilidades/conexao.php');
-if(!empty($_POST)){
-    $sql="";
+require('../utilidades/autoload.php');
+sessionador();
+if (!empty($_POST)) {
+    $sql = "";
     $nome = $_POST['nome'];
     $email = $_POST['email'];
     $telefone = $_POST['telefone'];
@@ -9,11 +10,22 @@ if(!empty($_POST)){
     $cpf = $_POST['cpf'];
     $senha = $_POST['senha'];
     $repetir = $_POST['repetir'];
-    if($nome != null and $email != null and $telefone != null and $cep != null and $cpf != null and ($senha == $repetir and $senha != null)){
-        $sql="INSERT into usuarios (nome,email,telefone,cep,cpf,senha)
-        VALUES('$nome','$email','$telefone','$cep','$cpf','$senha')";
+    $teste = true;
+
+    if ($nome != null and $email != null and $telefone != null and $cep != null and $cpf != null and ($senha == $repetir and $senha != null)) {
+        foreach ($bd->query("SELECT email from `usuarios` where email = '$email'") as $row) {
+            echo ('<script>alert("Entrada Invalida email ja cadastrado");</script>');
+            $teste = false;
+            header("Location:../", true);
         }
-    $bd->query($sql);
+        if ($teste) {
+            $sql = "INSERT into usuarios (nome,email,telefone,cep,cpf,senha)
+        VALUES('$nome','$email','$telefone','$cep','$cpf','$senha')";
+            $bd->query($sql);
+            echo ('<script>alert("Cadastro concluido");</script>');
+            header("Location:", true);
+        }
+    }
 };
 ?>
 <!DOCTYPE html>
