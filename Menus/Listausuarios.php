@@ -27,7 +27,7 @@ if (empty($_POST['pesquisa'])) {
     </div>
     <div class="centralizado" style="display: block; padding: 3rem; width:auto;">
         <form action="" method="POST">
-            <input id="pesquisa" name="pesquisa" class="inputCadastro Lista" oninput="nomeFill()" type="text">
+            <input placeholder="Pesquisa por Nome" id="pesquisa" name="pesquisa" class="inputCadastro Lista" oninput="nomeFill()" type="text">
             <input id="enviar" class="inputEnviar Lista" type="submit" value="Pesquisar">
         </form>
 

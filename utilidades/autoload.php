@@ -13,7 +13,7 @@ function sessionador()
             $count + 1;
             if ($row['nome'] != $nome and $count > 1) {
                 session_destroy();
-                header('Location:', true);
+                header('Location:/techweb-4b', true);
             }
         }
     } else {

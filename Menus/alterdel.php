@@ -1,21 +1,17 @@
 <?php
 require "../utilidades/autoload.php";
 sessionador();
-if (isset($_POST['enviar'])) {
-    $nome = $_POST['nome'];
-    $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
-    $cep = $_POST['cep'];
-    $cpf = $_POST['cpf'];
+if (isset($_POST["nome"])) {
+    $nome = $_POST["nome"];
+    $email = $_POST["email"];
+    $telefone = $_POST["telefone"];
+    $cep = $_POST["cep"];
+    $cpf = $_POST["cpf"];
     $senha = $_POST['senha'];
-    $id = $_GET['id'];
-    $sql = "UPDATE usuarios SET nome='$nome',email='$email',telefone='$telefone',cep='$cep',cpf='$cpf', senha='$senha' WHERE id = '$id';";
-    var_dump($sql);
+    $sql = "UPDATE `usuarios` SET `nome`='$nome',`email`='$email',`telefone`='$telefone',`cep`='$cep',`cpf`='$cpf', `senha`='$senha' WHERE `id` = '".$_GET['id']."';";
     $bd->query($sql);
-    echo ('<script>alert("Cadastro Alterado");</script>');
     header("Location:/techweb-4b/Menus/Listausuarios.php", true);
 }
-
 if (isset($_GET['delid'])) {
     $sql = "DELETE FROM usuarios WHERE id = '" . $_GET['delid'] . "';";
     $bd->query($sql);
@@ -48,19 +44,19 @@ foreach ($bd->query($sql) as $row) {
     <div class="centralizado" style="margin-top: 1rem;">
         <form id="form" class="formCadastro" method="post" autocomplete="off">
             <label class="labelCadastro" for="nome">Nome</label>
-            <input id="nome" name="nome" class="inputCadastro" type="text" value="">
+            <input value="Bruno" id="nome" name="nome" class="inputCadastro" type="text" value="">
             <label class="labelCadastro" for="email">Email</label>
-            <input id="email" name="email" class="inputCadastro" type="email">
+            <input value="bruno@bruno.bruno" id="email" name="email" class="inputCadastro" type="email">
             <label class="labelCadastro" for="telefone">Numero de telefone</label>
-            <input id="telefone" name="telefone" class="inputCadastro" type="tel">
+            <input value="12312321321" id="telefone" name="telefone" class="inputCadastro" type="tel">
             <label class="labelCadastro" for="cep">Cep</label>
-            <input id="cep" name="cep" class="inputCadastro" type="number">
+            <input value="123123123" id="cep" name="cep" class="inputCadastro" type="number">
             <label class="labelCadastro" for="cpf">CPF</label>
-            <input id="cpf" name="cpf" class="inputCadastro" type="number">
+            <input value="123124123" id="cpf" name="cpf" class="inputCadastro" type="number">
             <label class="labelCadastro" for="senha">Senha</label>
-            <input id="senha" name="senha" class="inputCadastro" type="password">
+            <input value="teste" id="senha" name="senha" class="inputCadastro" type="password">
             <br>
-            <input id="enviar" class="inputEnviar" nome="enviar" type="submit" onsubmit="alterar()" value="Enviar">
+            <input id="enviaralt" class="inputEnviar" nome="enviaralt" type="submit" value="Enviar">
         </form>
     </div>
 </body>

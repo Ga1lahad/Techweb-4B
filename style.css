@@ -120,13 +120,13 @@ nav {
 .inputCadastro.Lista {
    width: 80%;
    padding: 1px;
-   font-size: 1rem;
+   font-size: 2rem;
    margin-bottom: 1rem;
 }
 
 .inputEnviar.Lista {
    padding: 1px;
-   font-size: 1rem;
+   font-size: 2rem;
    margin-bottom: 1rem;
    width: 15%;
 }
